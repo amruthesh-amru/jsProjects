@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;1,200&family=Old+Standard+TT&family=Oswald:wght@200;300;400&family=Poppins:wght@200;300;400;500&family=Ubuntu&family=Varela+Round&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    text-align: center;
+    margin: 30px;
+}
+form{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 8px;
+}
+#search_input{
+    padding: 10px 20px;
+    width: 20%;
+    border: none;
+    box-shadow: 1px 1px 4px -1px rgb(177, 175, 175);
+    border-radius: 5px;
+}
+#search_button{
+    padding: 10px 20px; 
+    color: white;
+    border-radius: 5px;
+    background-color: #439e60;
+    border: none;
+}
+
+.container{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 50px;
+    margin: 0 auto;
+}
+.card{
+    box-shadow: 1px 1px 4px -1px rgb(177, 175, 175);
+   border-radius: 10px;
+}
+
+.card img{
+ 
+    width: 300px;
+    max-width: 300px;
+    height: 250px;
+    
+}
+.card:hover img {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+.card h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.show_more_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#show_more_button{
+    padding: 10px 20px; 
+    color: white;
+    border-radius: 5px;
+    background-color: #134652;
+    border: none;
+    margin-top: 50px;
+    text-align: center;
+    
+}
