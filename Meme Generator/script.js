@@ -2,13 +2,14 @@ const URL = "https://meme-api.com/gimme/wholesomememes";
 const generateMemeBtn = document.querySelector(".generate_meme_btn")
 
 const memeImage = document.querySelector(".meme_generator img");
-const memeTitle = document.getElementsByClassName("meme_title");
-const memeAuthor = document.getElementsByClassName("meme_author");
+const memeTitle = document.querySelector(".meme_title");
+const memeAuthor = document.querySelector(".meme_author");
+const memeAuthor1 = document.getElementsByClassName("meme_author");
 
 const updateDetails = (url, title, author) => {
     memeImage.setAttribute("src", url);
     memeTitle.innerHTML = title;
-    memeAuthor.innerHTML = author;
+    memeAuthor.innerHTML = `Meme by ${author}`;
 }
 
 // const generateMeme = () => {
@@ -26,3 +27,4 @@ async function generateMeme() {
 }
 
 generateMemeBtn.addEventListener("click", generateMeme);
+generateMeme();
