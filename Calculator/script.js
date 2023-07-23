@@ -9,8 +9,8 @@ const clearBtn = document.querySelector(".clear_btn");
 buttons.forEach(function (button) {
     button.addEventListener("click", function (e) {
         let value = e.target.dataset.num;
+        console.log(value);
         screen.value += value;
-
     })
 });
 
