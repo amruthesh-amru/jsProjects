@@ -1,0 +1,145 @@
+:root {
+    --primary:#393e3e;
+    --secondary:#145c72;
+    --secondary-light:#00a0d1;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+
+
+}
+body{
+    font-size: 1.6rem;
+}
+.background{
+    background-image: url(background.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 4rem;
+}
+.box{
+    width:80%;
+background-color: var(--primary);
+    height: 400px;
+    border:5px solid var(--secondary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3.5rem;
+}
+.content{
+    color: var(--primary);
+    text-align: center;
+}
+.content h2{
+    font-weight: 500;
+    line-height: 80%;
+    font-size: 6.4rem;
+}
+.content h1{
+    font-weight: 600;
+    line-height: 90%;
+    font-size: 8.6rem;
+}
+.calculate_form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+    padding: 5rem;
+    place-content: center;
+    place-items: center;
+}
+input{
+    height: 4.4rem;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.6rem;
+    max-width: 100%;
+    width: 25rem;
+}
+input::placeholder{
+    color: white;
+    font-size: 1.6rem;
+
+}
+input:focus-visible{
+    outline: 2px solid var(--secondary);
+    border: 2px solid var(--secondary);
+}
+.primary_btn{
+    width: 16rem;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--secondary);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+   position: absolute;
+   bottom: 38rem;
+}
+.primary_btn:hover{
+    opacity: 0.9;
+}
+.primary_btn:active{
+    opacity: 1;
+    background-color: var(--secondary-light);
+
+}
+.result{
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+}
+
+@media(max-width:1400px){
+    .container{
+        width: 90%;
+    }
+    
+}
+@media(max-width:786px){
+    .container{
+        width: 100%;
+    }
+    .result{
+        margin-bottom: 50px;
+    }
+    .calculate_form{
+        grid-template-columns: repeat(1,1fr);
+        gap: 3rem;
+    }
+    .box{
+        height: 450px;
+    }
+    .primary_btn{
+        bottom: 23rem;
+        margin-top: 50px;
+    }
+    .content h2{
+        font-size: 4rem;
+    }
+    .content h1{
+        font-size: 6rem;
+    }
+    input{
+        max-width: 100%;
+    }
+}
