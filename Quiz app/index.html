@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maths Question Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="box">
+        <h2>Score -> <span id="score">0</span></h2>
+        <h3 id="question">What is multipiled by ?</h3>
+        <form id="questionForm " onsubmit="checkAnswer(event)">
+          <input type="number" name="answer" id="answerInput" />
+          <button class="primary_btn" type="submit" id="primary_btn">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
