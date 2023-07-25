@@ -5,19 +5,51 @@ const scoreEl = document.getElementById("score")
 const form = document.getElementById("questionForm")
 let score = 0;
 let storedVariable;
+let number1;
+let number2;
 function generateRandomNumber(min, max) {
-    const random = Math.floor(Math.random() * max) + min;
+    let random = Math.floor(Math.random() * max) + min;
     return random;
 }
 function loadQuestion() {
     random1 = generateRandomNumber(1, 10)
     random2 = generateRandomNumber(1, 10)
+    randomQuestion = generateRandomNumber(1,4)
     console.log(typeof (random1), typeof (random2));
-
-    questionEl.innerHTML = `What is ${random1} multipiled by ${random2}`;
-    answer = random1 * random2;
-    storedVariable = answer
-   
+    
+    // questionEl.innerHTML = `What is ${random1} multipiled by ${random2}`;
+    // answer = random1 * random2;
+    console.log("random question" +randomQuestion);
+    console.log(random1 ,random2);
+    if(random1 < random2 && randomQuestion>=3){
+        number1 = random2;
+        number2 = random1
+        
+    }else{
+        number1 = random1;
+        number2 = random2;
+    }
+    
+    switch(randomQuestion){
+        case 1: questionEl.innerHTML =`What is ${number1} added to ${number2}`;
+        answer = number1 + number2;
+        storedVariable = answer;
+        break;
+        case 2: questionEl.innerHTML =`What is ${number1} multiplied by ${number2}`;
+        answer = number1 * number2;
+        storedVariable = answer
+        break;
+        case 3: questionEl.innerHTML =`What is ${number1} subtracted from ${number2}`;
+        answer = number1 - number2;
+        storedVariable = answer
+        break;
+        case 4: questionEl.innerHTML =`What is ${number1} divided by ${number2}`;
+        answer = number1 / number2;
+        storedVariable = answer
+        break;
+    }
+    
+    
 }
 loadQuestion();
 
@@ -27,8 +59,24 @@ function checkAnswer(event) {
     console.log(userValue, storedVariable);
     if (userValue == storedVariable) {
         score++;
+        Toastify({
+            text: `Your are correct and your score is ${score}`,
+            gravity: "bottom",
+            position: "center",
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+          }).showToast();
     } else {
         score--;
+        Toastify({
+            text: `Your are wrong and your score is ${score}`,
+            gravity: "bottom",
+            position: "center",
+            style: {
+              background: "linear-gradient(to right, #e33217, #ff001e)",
+            },
+          }).showToast();
     }
     scoreEl.innerHTML = `${score}`;
    
