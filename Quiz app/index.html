@@ -6,12 +6,12 @@
     <title>Maths Question Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="loadQuestion">
     <div class="background">
       <div class="box">
         <h2>Score -> <span id="score">0</span></h2>
-        <h3 id="question">What is multipiled by ?</h3>
-        <form id="questionForm " onsubmit="checkAnswer(event)">
+        <h3 id="question">What is 8 multipiled by 4?</h3>
+        <form id="questionForm" onsubmit="checkAnswer(event)">
           <input type="number" name="answer" id="answerInput" />
           <button class="primary_btn" type="submit" id="primary_btn">
             Submit

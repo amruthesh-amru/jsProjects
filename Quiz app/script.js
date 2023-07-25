@@ -1,8 +1,62 @@
 const submitButton = document.getElementById("primary_btn")
 const questionEl = document.getElementById("question")
 const userInput = document.getElementById("answerInput")
-const score = document.getElementById("score")
+const scoreEl = document.getElementById("score")
+const form = document.getElementById("questionForm")
+let score = 0;
+let storedVariable;
+function generateRandomNumber(min, max) {
+    const random = Math.floor(Math.random() * max) + min;
+    return random;
+}
+function loadQuestion() {
+    random1 = generateRandomNumber(1, 10)
+    random2 = generateRandomNumber(1, 10)
+    console.log(typeof (random1), typeof (random2));
 
+    questionEl.innerHTML = `What is ${random1} multipiled by ${random2}`;
+    answer = random1 * random2;
+    storedVariable = answer
+   
+}
+loadQuestion();
+
+function checkAnswer(event) {
+    event.preventDefault();
+    const userValue = userInput.value;
+    console.log(userValue, storedVariable);
+    if (userValue == storedVariable) {
+        score++;
+    } else {
+        score--;
+    }
+    scoreEl.innerHTML = `${score}`;
+   
+    userInput.value = ""
+    loadQuestion();
+}
+
+
+// submitButton.addEventListener("click", function callsOtherFunction(e) {
+   
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------
 // console.log(score.innerHTML);
 // const loadQuestion = () => {
 //     const random1 = Math.floor(Math.random() * 10) + 1;
@@ -28,37 +82,39 @@ const score = document.getElementById("score")
 //     loadQuestion();
 // }
 //----------------------------------------------------------
-const generateRandomNumber = (min, max){
-    const random = Math.floor(Math.random() * max) + min;
-    return random;
-}
-const generateQuestion = () => {
-    ranmdom1 = generateRandomNumber(1, 10);
-    ranmdom2 = generateRandomNumber(1, 10);
+// const generateRandomNumber = (min, max){
+//     const random = Math.floor(Math.random() * max) + min;
+//     return random;
+// }
+// const generateQuestion = () => {
+//     ranmdom1 = generateRandomNumber(1, 10);
+//     ranmdom2 = generateRandomNumber(1, 10);
 
-    question = `What is ${random1} multipiled by ${random2}`;
-    const answer = random1 * random2;
-    return { question, answer };
-}
-const showQuestion = () => {
-    const { question, answer } = generateQuestion()
-    questionEl.innerText = question;
-    storedAnswer = answer;
-}
-showQuestion();
+//     question = `What is ${random1} multipiled by ${random2}`;
+//     const answer = random1 * random2;
+//     return { question, answer };
+// }
+// const showQuestion = () => {
+//     const { question, answer } = generateQuestion()
+//     questionEl.innerText = question;
+//     storedAnswer = answer;
+// }
+// showQuestion();
 
-const checkAnswer = (event) => {
-    event.preventDefault();
-    const formData = new FormData(questionEl);
-    const userAnswer = +formData.get("answer")
-    if (userAnswer === storedAnswer) {
-        score += 1;
-    } else {
-        score -= 1;
-    }
-    score.innerText = score;
-    showQuestion();
-}
+// const checkAnswer = (event) => {
+//     event.preventDefault();
+//     const formData = new FormData(questionEl);
+//     const userAnswer = +formData.get("answer")
+//     if (userAnswer === storedAnswer) {
+//         score += 1;
+//     } else {
+//         score -= 1;
+//     }
+//     score.innerText = score;
+//     showQuestion();
+// }
+
+
 // const questionEl = document.getElementById("question");
 // const questionFormEl = document.getElementById("questionForm");
 // const scoreEl = document.getElementById("score");
