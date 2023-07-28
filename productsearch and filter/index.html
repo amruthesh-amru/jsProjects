@@ -6,9 +6,19 @@
     <title>product search and filter</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/077497d41f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="product_container">
+    <div class="input_container">
+      <div class="icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <input type="text" placeholder="Search Products" id="inputField" />
+    </div>
+    <div class="product_container" id="product_container">
       <div class="card" id="card">
         <div class="image_container">
           <img

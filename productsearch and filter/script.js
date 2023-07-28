@@ -1,41 +1,65 @@
-const url = "https://fakestoreapi.com/products";
-const cardEl = document.getElementById("card")
-const fetchDetails = async () => {
-    const res = await fetch(url)
-    const data = await res.json();
-    console.log(data);
+(async () => {
+  const productContainerEl = document.getElementById("product_container")
+  const inputField = document.getElementById("inputField")
 
-    data.map((data) => {
-        const product_container = document.createElement("div")
-        product_container.classList.add("product_container")
-        const card = document.createElement("div")
-        card.classList.add("card")
-        const image_container = document.createElement("div")
-        image_container.classList.add("image_container")
-        const image = image_container.createElement("img")
-        image.src = data.image;
-        product_container.classList.add("")
+  const url = "https://fakestoreapi.com/products";
 
-    })
-    // for (let i = 0; i < data.length; i++) {
-    //     data.forEach((data) => {
-    //         card.innerHTML = `<div class="card" id="card">
-    //         <div class="image_container">
-    //           <img
-    //             src="${data.image}"
-    //             alt=""
-    //           />
-    //         </div>
-    //         <div class="product_content">
-    //           <h2>
-    //             ${data.title}
-    //           </h2>
-    //           ${data.description.split(" ").slice(0, 20).join(" ")}
-    //           <button>${data.price}</button>
-    //         </div>
-    //       </div>`
-    //     })
-    // }
 
-}
-fetchDetails()
+  const fetchProducts = async () => {
+    try {
+      const res = await fetch(url)
+      return await res.json();
+    } catch (error) {
+      return error
+    }
+  }
+
+  //fecthProducts returns products and is stored in variable products
+  let products = await fetchProducts()
+
+  //generates the only single card by the given product
+  const productCardGenerater = (products) => {
+    return `<div class="card" id="card">
+                <div class="image_container">
+                  <img
+                    src="${products.image}"
+                    alt=""
+                  />
+                </div>
+                <div class="product_content">
+                  <h2>
+                    ${products.title}
+                  </h2>
+                  ${products.description.split(" ").slice(0, 20).join(" ")}
+                  <button>$ ${products.price}</button>
+                </div>
+              </div>`
+  }
+  //sends an array to generate multiple cards 
+  const renderProducts = (products) => {
+    productContainerEl.innerHTML = "";
+
+    products.forEach((products => {
+      productContainerEl.innerHTML += productCardGenerater(products)
+
+    }))
+  }
+
+  //returns true if the searchText is present in either title,description or price
+  const checkTextContains = (searchText, text) => {
+    return text.toString().toLowerCase().includes(searchText)
+  }
+
+  const filterHandler = (event) => {
+    const searchText = event.target.value;
+
+    const filteredProducts = products.filter((products => {
+      return checkTextContains(searchText, products.title) ||
+        checkTextContains(searchText, products.description) ||
+        checkTextContains(searchText, products.price)
+    }))
+    renderProducts(filteredProducts)
+  }
+  inputField.addEventListener("keydown", filterHandler)
+  renderProducts(products)
+})()
