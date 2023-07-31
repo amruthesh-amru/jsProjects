@@ -15,11 +15,9 @@ html,body{
     background-color: var(--primary);
 }
 .container{
-   
     height: 100vh;
     display: grid;
     place-items: center;
-
 }
 .box{
     width: 500px;
@@ -27,6 +25,8 @@ html,body{
     background-color: white;
     box-shadow: 0px 19px 41px rgba(0, 0,0,0.36);
     padding: 10px;
+    
+    
 }
 .box h1,h4{
     text-align: center;
@@ -58,13 +58,16 @@ button:hover{
 button:active{
     background-color: var(--primary-dark)
 }
-.qrSection, .show{
-    display: grid;
-    place-items: center;
-    display: none;
+.qrContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    padding: 20px;
     
 }
-section ,.show img {
+section , 
+img {
     height: 200px;
     width: 200px;
   
@@ -77,4 +80,7 @@ section ,.show img {
 
 .show{
     display: contents;
+}
+.hide{
+    display: none;
 }
