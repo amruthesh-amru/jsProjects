@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primary: #3a3a3a;
+  --primary-dark: #302d2d;
+  --green: #008104;
+  --red: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.container{
+    height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upper_section{
+    height: 700px;
+    width: 400px;
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    
+}
+.upper_section h1{
+    font-weight:400 ;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.upper_section h3{
+    font-weight:400 ;
+    font-size: 22px;
+}
+.tranction_card1 {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: greenyellow;
+    color: var(--primary);
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.tranction_card2 {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: red;
+    color: white;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+    
+}
+.tranction_card .red{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: red;
+    color: var(--primary);
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.right_part{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 5px;
+}
+.left_part{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    gap: 190px;
+}
+.up_section h3{
+    text-align: left;
+    font-size: 19px;
+    margin-top:14px;
+    border-bottom:1px solid white ;
+}
+
