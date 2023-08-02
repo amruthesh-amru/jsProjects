@@ -22,9 +22,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .upper_section{
-    height: 700px;
+    height: 500px;
     width: 400px;
     background-color: var(--primary-dark);
     color: white;
@@ -45,8 +46,8 @@ html {
     display: flex;
     align-items: center;
     justify-content:space-around;
-    background-color: greenyellow;
-    color: var(--primary);
+    background-color: limegreen;
+    color: white;
     height: 40px;
     margin-top: 10px;
     padding: 5px;
@@ -91,4 +92,56 @@ html {
     margin-top:14px;
     border-bottom:1px solid white ;
 }
-
+.lower_section{
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    text-align: left;
+    padding: 15px;
+}
+.input_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.lower_section h2{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.lower_section input{
+    padding: 6px;
+}
+.lower_section button{
+    width: 190px;
+    
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+.buttons button{
+    border: none;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 26px;
+}
+.earningsBtn{
+    background-color: limegreen
+}
+.expenseBtn{
+    background-color: red
+}
+.form h3{
+    font-weight: 400;
+    margin-bottom: 5px;
+}
