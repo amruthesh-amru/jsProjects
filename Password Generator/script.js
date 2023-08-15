@@ -11,7 +11,7 @@ let isNumber = false;
 generatePassword = (passwordLength) => {
     let password = "";
     const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    const upperCase = isUpperCase ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : " ";
+    const upperCase = isUpperCase ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : "";
     const symbols = isSymbols ? "!@#$%^&*()_" : "";
     const numbers = isNumber ? "1234567890" : "";
 
