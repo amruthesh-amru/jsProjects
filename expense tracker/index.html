@@ -44,19 +44,41 @@
           <form class="form" id="form">
             <div class="description">
               <h3>Text</h3>
-              <input type="text" placeholder="Enter Description" />
+              <input
+                required
+                type="text"
+                placeholder="Enter Description"
+                name="description"
+                id="description"
+              />
             </div>
             <div class="amount">
               <h3>Amount</h3>
-              <input type="number" placeholder="Enter Amount" />
+              <input
+                required
+                type="number"
+                placeholder="Enter Amount"
+                name="amount"
+                id="amount"
+              />
             </div>
           </form>
           <div class="buttons">
-            <button class="earningsBtn">
+            <button
+              type="submit"
+              name="earningsBtn"
+              class="btn earningsBtn"
+              id="earningsBtn"
+            >
               <h4>₹0</h4>
               <h4>Earnings</h4>
             </button>
-            <button class="expenseBtn">
+            <button
+              type="submit"
+              name="expenseBtn"
+              class="btn expenseBtn"
+              id="expenseBtn"
+            >
               <h4>₹0</h4>
               <h4>Expense</h4>
             </button>
