@@ -5,43 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My landing Page</title>
     <link rel="stylesheet" href="style.css" />
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </head>
     <script src="./script.js" defer></script>
+    <script src="./notation.js" defer></script>
     <script
       src="https://kit.fontawesome.com/077497d41f.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <nav>
-      <div class="left">
-        <ul>
-          <button><li>Amruthesh</li></button>
-        </ul>
-      </div>
-      <div class="middle">
-        <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Experience</li>
-        </ul>
-      </div>
-      <div class="right">
-        <ul>
-          <li><i class="fa-solid fa-pen-to-square"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-github"></i></li>
-          <li><i class="fa-brands fa-linkedin"></i></li>
-          <li class="dark_mode"><i class="fa-solid fa-sun"></i></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="nav_container">
+      <nav>
+        <div class="left">
+          <ul>
+            <button><li>Amruthesh</li></button>
+          </ul>
+        </div>
+        <div class="middle">
+          <ul>
+            <a href="./about.html"><li>About</li></a>
+            <li>Projects</li>
+            <li>Experience</li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li><i class="fa-solid fa-pen-to-square"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-github"></i></li>
+            <li><i class="fa-brands fa-linkedin"></i></li>
+            <li class="dark_mode"><i class="fa-solid fa-sun"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
     <div class="hero_section_container">
       <div class="hero_section">
         <div class="left_hero">
-          <h1>Front-End Engineer</h1>
-          <h1>Tinkerer</h1>
-          <h1>Lifelong Learner</h1>
-          <h1>I Get Things Done</h1>
+          <h1 class="content_1 animate__animated animate__lightSpeedInLeft">
+            Front-End Engineer
+          </h1>
+          <h1 class="content_2 animate__animated animate__lightSpeedInLeft">
+            Tinkerer
+          </h1>
+          <h1 class="content_3 animate__animated animate__lightSpeedInLeft">
+            Lifelong Learner
+          </h1>
+          <h1 class="content_4 animate__animated animate__lightSpeedInLeft">
+            I Get Things Done
+          </h1>
         </div>
         <div class="right_hero">
           <img src="./IMG_5313.jpeg" alt="" />
