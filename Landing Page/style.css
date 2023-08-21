@@ -13,7 +13,7 @@ body{
     background-color: #1F2937;
 
 }
-ul li{
+nav ul li{
     list-style: none;
 }
 a{
@@ -276,4 +276,72 @@ footer{
 }
 .left_about_content span:hover::after{
     width: 100%;
+}
+.card_section{
+    background-color: #111827;
+    padding: 70px 50px;
+}
+ #h1{
+    text-align: center;
+    color: #0EA5E9;
+    margin-bottom: 90px;
+}
+.card_container{
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #111827;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 100px;
+    
+}
+.card{
+    width: 350px;
+    height: 350px;
+    background-color: #111827;
+    color: #6B7280;
+    box-shadow: 11px 15px 22px -5px rgba(14,165,233,0.18);
+    border-left: 5px solid #0EA5E9;
+    border-radius:5px ;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:20px 25px;
+}
+
+.card h1{
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.card h3{
+    font-size: 16px;
+    color: white;
+    
+}
+.card ul li{
+    margin-left: 10px;
+    
+}
+.html_css_section{
+    margin-top: 90px;
+}
+.swiper{
+  width: 900px;
+  height: 550px;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;  
+}
+.swiper img{
+    width: 900px;
+  height: 600px;
+  
+}
+.swiper:hover{
+    box-shadow: 0px 2px 42px 0px rgba(39, 180, 245, 0.29);
+    transition: 0.3s ease-in-out;
 }

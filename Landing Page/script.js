@@ -1,9 +1,21 @@
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    loop: true,
 
-const { annotate } = RoughNotation;
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
-const e = document.querySelector(".content_1")
-const annotation = annotate(e, {
-    type: 'highlight', color: '#FFF176'
 });
-annotation.show();
