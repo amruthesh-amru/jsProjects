@@ -23,14 +23,14 @@
       <nav>
         <div class="left">
           <ul>
-            <button><li>Amruthesh</li></button>
+            <button id="preventDefault"><li>Amruthesh</li></button>
           </ul>
         </div>
         <div class="middle">
           <ul>
-            <a href="./about.html"><li>About</li></a>
-            <a href="./projests.html"><li>Projects</li></a>
-            <li>Experience</li>
+            <a href="./about.html"><li id="preventDefault">About</li></a>
+            <a href="./projests.html"><li id="preventDefault">Projects</li></a>
+            <li id="preventDefault">Experience</li>
           </ul>
         </div>
         <div class="right">
@@ -47,7 +47,9 @@
               <li><i class="fa-brands fa-linkedin"></i></li>
             </a>
 
-            <li class="dark_mode"><i class="fa-solid fa-sun"></i></li>
+            <li class="current_dark_mode">
+              <i id="current_dark_mode" class="fa-solid fa-sun"></i>
+            </li>
           </ul>
         </div>
       </nav>

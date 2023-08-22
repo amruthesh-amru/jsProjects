@@ -10,15 +10,28 @@ html{
 body{
     font-size: 1.6rem;
     font-family: Inter var,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    background-color: #1F2937;
+    background-color: var(--primary-color);
 
+}
+:root{
+    --primary-color:#1F2937;
+    --seconndary-color:#111827;
+    --third-color:#fff;
+    --fourth-color:#D1D5DB;
+    
+}
+.light_theme{
+    --primary-color:white;
+    --seconndary-color:#E2E8F0;
+    --third-color:black;
+    --fourth-color:#374151;
 }
 nav ul li{
     list-style: none;
 }
 a{
     text-decoration: none;
-    color:#D1D5DB ;
+    color:var(--fourth-color) ;
 }
 .nav_container{
     padding: 52px 16px;
@@ -30,14 +43,14 @@ nav{
     
     font-size: 17px;
     font-weight:2400;
-    color: #D1D5DB;
-    background-color: #1F2937;
+    color: var(--fourth-color);
+    background-color:  var(--primary-color);
     margin: 0 auto;
 }
 nav button{
     border: none;
     background: conic-gradient(from 90deg at 50% 50%,#f25656 0deg,#fbd03b 80deg,#56c4f5 208deg,#c156c2 330deg,#f25656 1turn);
-    color: black;
+    color: var(--third-color);
     font-size: 25px;
     font-weight: 600;
     padding: 10px;
@@ -66,7 +79,7 @@ nav button{
 }
 
 .hero_section_container{
-    background-color: #1F2937;
+    background-color:var(--primary-color);
 }
 .hero_section{
     position: relative;
@@ -75,7 +88,7 @@ nav button{
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    color: white;
+    color: var(--third-color);
     height: 65vh;
     width: 1250px;
     margin: 0 auto;
@@ -100,7 +113,7 @@ nav button{
     border-radius: 10px;
 }
 .lower_section_container{
-    background-color: #111827;
+    background-color: var(--seconndary-color);
     height: 50vh;
    
 }
@@ -121,7 +134,7 @@ nav button{
    
 }
 footer{
-    background-color: #111827;
+    background-color: var(--seconndary-color);
 }
 .footer_container{
     width: 1100px;
@@ -146,14 +159,14 @@ footer{
 }
 .footer_content h1{
     margin-top: 20px;
-    color: white;
+    color: var(--third-color);
     font-weight: 500;
     font-size: 22px;
 }
 .footer_content button{
     border: none;
     background-color: #0EA5E9;
-    color: white;
+    color: var(--third-color);
     font-size: 22px;
     font-weight: 500;
     padding: 5px;
@@ -169,14 +182,14 @@ footer{
 /* -----------------about section------------------------------ */
 
 .about_hero_section_container{
-    background-color: #1F2937;
+    background-color:var(--primary-color);
     
 }
 
 .about_hero_section{
     position: relative;
     top: 32px;
-    color: white;
+    color: var(--third-color);
      width: 1250px;
     height: 35vh;
     margin: 0 auto;
@@ -188,13 +201,13 @@ footer{
     
 }
 .about_content_container{
-    background-color: #111827;
+    background-color: var(--seconndary-color);
     padding: 50px;
 }
 .about_content{
     width: 1250px;
     margin:  0 auto;
-    color: white;
+    color: var(--third-color);
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -205,7 +218,7 @@ footer{
     font-weight: 500;
     width: 1250px;
     margin:  0 auto;
-    color: white;
+    color: var(--third-color);
     margin-bottom: 70px;
     margin-top: 50px;
 }
@@ -226,14 +239,14 @@ footer{
     width: 30%;
 }
 .left_about_content h2{
-    color: #fff;
+    color:var(--third-color);
     font-weight: 600;
     line-height: 1.75rem;
     font-size: 28px;
     margin-bottom: 10px;
 }
 .left_about_content p{
-    color: #D1D5DB;
+    color: var(--fourth-color);
     font-weight: 600;
     font-weight: 400;
     font-size: 17px;
@@ -241,7 +254,7 @@ footer{
     margin-bottom: 20px;
 }
 .left_about_content ul li{
-    color: #D1D5DB;
+    color: var(--fourth-color);
     font-weight: 600;
     font-weight: 400;
     font-size: 20px;
@@ -249,20 +262,20 @@ footer{
     margin-bottom: 20px;
 }
 .right_about_content h2{
-    color: #D1D5DB;
+    color: var(--fourth-color);
     font-weight: 600;
     font-weight: 400;
     font-size: 21px;
 }
 #mail ,#resume{
-    border-bottom: 1px solid #D1D5DB;
+    border-bottom: 1px solid --fourth-color;
     font-weight: 700;
 }
 .left_about_content span{
     /* border-bottom: 2px solid #D1D5DB;
     border-color: transparent; */
     display: inline-block;
-    color: #D1D5DB;
+    color: var(--fourth-color);
     text-decoration: none;
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
@@ -271,14 +284,14 @@ footer{
     display: block;
     width: 0;
     height: 2px;
-    background: #D1D5DB;
+    background: var(--fourth-color);
     transition: width .3s;
 }
 .left_about_content span:hover::after{
     width: 100%;
 }
 .card_section{
-    background-color: #111827;
+    background-color: var(--seconndary-color);
     padding: 70px 50px;
 }
  #h1{
@@ -289,7 +302,7 @@ footer{
 .card_container{
     width: 1100px;
     margin: 0 auto;
-    background-color: #111827;
+    background-color: var(--seconndary-color);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -300,7 +313,7 @@ footer{
 .card{
     width: 350px;
     height: 350px;
-    background-color: #111827;
+    background-color: var(--seconndary-color);
     color: #6B7280;
     box-shadow: 11px 15px 22px -5px rgba(14,165,233,0.18);
     border-left: 5px solid #0EA5E9;
@@ -311,16 +324,39 @@ footer{
     justify-content: space-between;
     padding:20px 25px;
 }
+.link_container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 75px;
+}
+
+.link_container h4{
+    border-bottom: 1px solid transparent;
+    color: var(--third-color);
+}
+.link_container h4::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--fourth-color);
+    transition: width .3s;
+}
+.link_container h4:hover::after{
+    width: 100%;
+}
+
 
 .card h1{
     font-size: 22px;
-    color: white;
+    color: var(--third-color);
     font-weight: 600;
     margin-bottom: 15px;
 }
 .card h3{
     font-size: 16px;
-    color: white;
+    color: var(--third-color);
     
 }
 .card ul li{
