@@ -26,6 +26,9 @@ body{
     --third-color:black;
     --fourth-color:#374151;
 }
+.active_page{
+    color: black;
+}
 nav ul li{
     list-style: none;
 }
@@ -39,8 +42,7 @@ a{
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
     font-size: 17px;
     font-weight:2400;
     color: var(--fourth-color);
@@ -74,8 +76,8 @@ nav button{
     font-weight: 200;
     
 }
-.dark_mode i{
-    color: yellow;
+.current_dark_mode i{
+    color: rgb(214, 214, 132);
 }
 
 .hero_section_container{
@@ -331,7 +333,7 @@ footer{
    gap: 75px;
 }
 
-.link_container h4{
+.link_container a  {
     border-bottom: 1px solid transparent;
     color: var(--third-color);
 }
@@ -339,8 +341,8 @@ footer{
     content: '';
     display: block;
     width: 0;
-    height: 1px;
-    background: var(--fourth-color);
+    height: 2px;
+    background-color: var(--fourth-color);
     transition: width .3s;
 }
 .link_container h4:hover::after{
