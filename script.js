@@ -3,26 +3,6 @@ const current_dark_mode = document.getElementById("current_dark_mode");
 const arrowAnimation = document.querySelectorAll(".arrowAnimation")
 const activePage = window.location.pathname;
 
-// let navLink = document.querySelectorAll("nav a")
-// navLink.forEach(ele => {
-//     ele.addEventListener("click", () => {
-//         navLink.array.forEach(link => {
-
-//             if (link.href.includes(`${activePage}`)) {
-//                 console.log(activePage);
-//                 console.log(link.innerHTML);
-//                 link.innerHTML = `${link} &darr;`;
-//                 // arrowAnimation.forEach(ele => {
-//                 //     ele.innerHTML = `${ele.innerHTML} &darr;`;
-//                 // })
-//             }
-
-//         });
-//     })
-// })
-
-
-
 current_dark_mode.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.toggle("light_theme")
@@ -38,7 +18,7 @@ current_dark_mode.addEventListener("click", (e) => {
 
 })
 window.addEventListener("load", () => {
-    //default light
+
     let currentMode = localStorage.getItem("theme");
     console.log("currnetMode " + currentMode);
     if (currentMode == "light") {
